@@ -1,0 +1,28 @@
+<h1>Veterinary Data Sheet</h1>
+
+<p *ngIf="!empList"><em>Loading...</em></p>
+
+<table class='table' *ngIf="empList">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>LastName</th>
+      <th>MI Employee</th>
+      <th>Pets</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of empList">
+      <td>{{ emp.id }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.lastName }}</td>
+      <td>{{ emp.miemployee }}</td>
+      <td>{{ emp.pets.length }}</td>
+      <td>
+      <td>
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
